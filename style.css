@@ -10,12 +10,16 @@
     --secondary-color: #b1fc73;
 }
 .navbar{
+    position: fixed;
+    top: 0px;
+    width: 100%;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: white;
       box-shadow:0 0 10px gray;
+      z-index: 99999;
 }
 
 .logo{
@@ -142,21 +146,413 @@
 }
 }
 
-/* nav animation */
-/* 
-.nav-content{
-    transform: translateX(-100%);
-    animation: slideIn 0.3s forwards;
-    transition: 2s;
+
+ /* hero content */
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section{
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+    padding:120px 8%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.45)
+    ),
+
+    url("./src/hero-1.jpg");
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-size:cover;
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
+/* =========================
+   HERO ICONS
+========================= */
+
+.hero-icons{
+
+    display:flex;
+
+    gap:40px;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    flex-wrap:wrap;
+}
+
+.hicon{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+}
+
+.subicon{
+
+    position:relative;
+}
+
+.subicon i{
+
+    padding:30px;
+
+    color:green;
+
+    font-size:24px;
+
+    height:70px;
+    width:70px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#EEFBF2;
+}
+
+.subicon span{
+
+    position:absolute;
+
+    top:0;
+    right:0;
+
+    background:green;
+
+    height:22px;
+    width:22px;
+
+    border-radius:50%;
+
+    color:white;
+
+    font-size:12px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.hicon p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    color:#fff;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.hero-section h1{
+
+    font-size:clamp(38px,6vw,75px);
+
+    margin-bottom:20px;
+
+    color:#fff;
+
+    line-height:1.1;
+
+    max-width:800px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.hero-section > p{
+
+    font-size:clamp(16px,2vw,22px);
+
+    max-width:650px;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+
+    color:#fff;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-btns{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.hero-btns button{
+
+    padding:15px 30px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.4s ease;
+}
+
+.hero-btns button:first-child{
+
+    background:green;
+
+    color:white;
+
+    border:none;
+}
+
+.hero-btns button:first-child:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(0,128,0,0.3);
+}
+
+.hero-btns button:last-child{
+
+    background:white;
+
+    color:green;
+
+    border:none;
+}
+
+.hero-btns button:last-child:hover{
+
+    transform:translateY(-5px);
+}
+
+/* =========================
+   IMAGE BUTTONS
+========================= */
+
+.imgbtn{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-direction:column;
+
+    position:absolute;
+
+    right:5%;
+
+    top:50%;
+
+    transform:translateY(-50%);
+}
+
+.imgbtn button{
+
+    height:20px;
+    width:20px;
+
+    border-radius:50%;
+
+    border:2px solid white;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.top button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    position: fixed;
+    right: 4%;
+    bottom: 5%;
+    background:linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+/* ACTIVE BUTTON */
+
+.active-btn{
+
+    background:green !important;
+
+    border-color:green;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+    .hero-section{
+
+        padding:120px 6%;
     }
-    to {
-        transform: translateX(0);
-        opacity: 1;
+
+    .hero-section h1{
+
+        max-width:600px;
     }
-} */
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .hero-section{
+
+        padding:120px 5% 80px;
+
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .hero-icons{
+
+        justify-content:center;
+
+        gap:25px;
+    }
+
+    .subicon i{
+
+        height:60px;
+        width:60px;
+
+        font-size:20px;
+    }
+
+    .hicon p{
+
+        font-size:16px;
+    }
+
+    .hero-section h1{
+
+        font-size:45px;
+    }
+
+    .hero-section > p{
+
+        max-width:100%;
+
+        text-align:center;
+
+        font-size:16px;
+    }
+
+    .hero-btns{
+
+        justify-content:center;
+    }
+
+    .hero-btns button{
+
+        width:100%;
+    }
+
+    .imgbtn{
+
+        position:static;
+
+        flex-direction:row;
+
+        margin-top:40px;
+
+        transform:none;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .hero-section h1{
+
+        font-size:34px;
+    }
+
+    .hero-icons{
+
+        gap:28px;
+    }
+
+    .subicon i{
+
+        height:40px;
+        width:40px;
+        padding: 15px;
+        font-size:16px;
+    }
+
+     .subicon span{
+        font-size: 10px;
+        height: 15px;
+        width: 15px;
+    }
+
+    .hero-btns button{
+
+        padding:14px 20px;
+        border-radius: 20px;
+        font-size:15px;
+        width: 90%;
+    }
+
+    .imgbtn button{
+
+        height:16px;
+        width:16px;
+    }
+
+}
