@@ -1,3 +1,5 @@
+// nav bar
+
 let navcontent = document.querySelector('.nav-content');
 let toggle = document.querySelector('.menu-toggle');
 let close1 = document.querySelector(".close-btn");
@@ -48,7 +50,9 @@ setInterval(() => {
     }
 
     herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url(${image[index]})`;
-
+    img1.style.backgroundColor="transparent"
+        img2.style.backgroundColor="transparent"
+        img3.style.backgroundColor="transparent"
 },2000);
 
 
@@ -57,22 +61,92 @@ let img2=document.querySelector(".img2")
 let img3=document.querySelector(".img3")
 
 img1.addEventListener("click",()=>{
-        herosection.style.backgroundImage =`url("./src/hero-1")`;
+        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-1")`;
         img1.style.backgroundColor="green"
         img2.style.backgroundColor="transparent"
         img3.style.backgroundColor="transparent"
 })
 
 img2.addEventListener("click",()=>{
-        herosection.style.backgroundImage =`url("./src/hero-2")`;
+        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-2")`;
         img2.style.backgroundColor="green"
         img3.style.backgroundColor="transparent"
         img1.style.backgroundColor="transparent"
 })
 
 img3.addEventListener("click",()=>{
-        herosection.style.backgroundImage =`url("./src/hero-3")`;
+        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-3")`;
         img3.style.backgroundColor="green"
         img1.style.backgroundColor="transparent"
         img2.style.backgroundColor="transparent"
 })
+
+//  footer section
+
+/* =========================
+   FOOTER SUBSCRIBE
+========================= */
+
+let subscribeBtn =
+document.querySelector(".newsletter-box button");
+
+let emailInput =
+document.querySelector(".newsletter-box input");
+
+/* BUTTON CLICK */
+
+subscribeBtn.addEventListener("click",()=>{
+
+    let emailValue =
+    emailInput.value.trim();
+
+    /* CHECK EMPTY */
+
+    if(emailValue === ""){
+
+        alert("Please enter your email");
+
+    }
+
+    /* EMAIL VALIDATION */
+
+    else if(
+        !emailValue.includes("@") ||
+        !emailValue.includes(".")
+    ){
+
+        alert("Please enter a valid email");
+
+    }
+
+    /* SUCCESS */
+
+    else{
+
+        alert("Subscribed Successfully!");
+
+        emailInput.value = "";
+    }
+
+}); 
+
+// top
+
+/* =========================
+   SCROLL TO TOP
+========================= */
+
+let topBtn =
+document.querySelector(".topbtn");
+
+topBtn.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
