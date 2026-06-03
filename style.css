@@ -9,17 +9,47 @@
     --primary-color: #0c8831;
     --secondary-color: #b1fc73;
 }
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar{
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-      box-shadow:0 0 10px gray;
-      z-index: 99999;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:10px 20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:99999;
+
+    /* INITIAL */
+
+    background:transparent;
+
+    box-shadow:none;
+
+    transition:0.4s ease;
+}
+
+/* =========================
+   SCROLL NAVBAR
+========================= */
+
+.navbar.active{
+
+    background:white;
+    box-shadow:0 0 10px gray;
 }
 
 .logo{
@@ -39,10 +69,27 @@
     font-size: 18px;
 }
 
-.nav-links ul li a{
-    text-decoration: none;
+.navlink{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:0.3s ease;
+}
+
+/* SCROLL TIME */
+
+.navbar.active .navlink{
+
     color:black;
-}   
+} 
+
+.navbar.active .nav-icons span{
+
+    color:gray;
+    border-color: gray;
+} 
 
 .nav-content{
     display: flex;
@@ -58,11 +105,11 @@
 }
 
 .nav-icons span{
-    border: 1px solid gray;
+    border: 1px solid white;
     padding: 5px;
     font-size: 15px;
     font-weight: bold;
-    color: gray;
+    color: white;
 }
 
 .login-btn{
@@ -180,7 +227,7 @@
     rgba(0,0,0,0.45)
     ),
 
-    url("./src/hero-1.jpg");
+    url("./src/hero-1.webp");
 
     background-position:center;
 
@@ -637,7 +684,7 @@
     rgba(0,0,0,0.78)
     ),
 
-    url("./src/footer-bg.jpg");
+    url("./src/footer-bg.webp");
 
     background-size:cover;
 
@@ -927,3 +974,133 @@
         justify-content:center;
     }
 }
+
+
+/* =========================
+   FARM FEATURES
+========================= */
+
+.farm-features{
+
+    width:100%;
+
+    padding:clamp(30px,5vw,80px) 5%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    background:#EEF4ED;
+
+    position:relative;
+}
+
+/* BOX */
+
+.feature-box{
+
+    height: clamp(70px, 10vw, 160px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+}
+
+/* VERTICAL LINE */
+
+.feature-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:1px;
+
+    height: clamp(50px,8vh,120px);
+
+    background:#79C54A;
+}
+
+/* HORIZONTAL LINE */
+
+.feature-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    height:1px;
+
+    background:#79C54A;
+}
+
+/* REMOVE EXTRA LINES */
+
+.feature-box:nth-child(5)::after,
+.feature-box:nth-child(8)::after{
+
+    display:none;
+}
+
+.feature-box:nth-child(n+6)::before{
+
+    display:none;
+}
+
+/* CENTER LAST 3 */
+
+.feature-box:nth-child(6){
+
+    grid-column:2;
+}
+
+.feature-box:nth-child(7){
+
+    grid-column:3;
+}
+
+.feature-box:nth-child(8){
+
+    grid-column:4;
+}
+
+/* IMAGE */
+
+.feature-box img{
+
+    width:clamp(50px,7vw,120px);
+
+    transition:0.4s ease;
+}
+
+/* HOVER */
+
+.feature-box:hover img{
+
+    transform:scale(1.1);
+}
+
+/* =========================
+   MOBILE
+========================= *//* =========================
+   MOBILE
+========================= */

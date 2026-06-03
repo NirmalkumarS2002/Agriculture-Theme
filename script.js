@@ -36,11 +36,34 @@ window.addEventListener("resize", (() => {
 
 }))
 
+/* =========================
+   NAVBAR SCROLL EFFECT
+========================= */
+
+let navbar =
+document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 50){
+
+        navbar.classList.add("active");
+
+    }
+
+    else{
+
+        navbar.classList.remove("active");
+
+    }
+
+});
+
 
 // hero section
 
 let herosection = document.querySelector(".hero-section")
-let image = ["./src/hero-1", "./src/hero-2", "./src/hero-3"]
+let image = ["./src/hero-1.webp", "./src/hero-2.webp", "./src/hero-3.webp"]
 let index = 0;
 
 setInterval(() => {
