@@ -2422,115 +2422,263 @@
    SECTION 5 — TESTIMONIALS
    ================================================ */
 
-.testimonials-section {
-    padding: 110px 8%;
-    background: #EEFBF2;
-    text-align: center;
+/* ================================================
+   SECTION 5 — TESTIMONIALS
+================================================ */
+
+.testimonials-section{
+
+    padding:110px 8%;
+
+    background:#EEFBF2;
+
+    text-align:center;
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    margin-top: 10px;
+/* GRID */
+
+.testimonials-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+    margin-top:10px;
+
+    align-items:stretch;
 }
 
-.tcard {
-    background: #fff;
-    border-radius: 22px;
-    padding: 36px 30px;
-    text-align: left;
-    border: 1px solid #eee;
-    transition: 0.4s ease;
-    position: relative;
+/* CARD */
+
+.tcard{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:36px 30px;
+
+    text-align:left;
+
+    border:1px solid #eee;
+
+    transition:0.4s ease;
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:100%;
 }
 
-.tcard:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
-    border-color: rgba(12, 136, 49, 0.15);
+/* HOVER */
+
+.tcard:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.07);
+
+    border-color:
+    rgba(12,136,49,0.15);
 }
 
-.tcard-quote {
-    position: absolute;
-    top: 20px;
-    right: 24px;
+/* QUOTE */
+
+.tcard-quote{
+
+    position:absolute;
+
+    top:20px;
+
+    right:24px;
 }
 
-.tcard-quote .material-symbols-outlined {
-    font-size: 52px;
-    color: #EEFBF2;
-    font-variation-settings: 'FILL' 1;
+.tcard-quote .material-symbols-outlined{
+
+    font-size:52px;
+
+    color:#EEFBF2;
+
+    font-variation-settings:'FILL' 1;
 }
 
-.tcard-stars {
-    display: flex;
-    gap: 3px;
-    margin-bottom: 18px;
+/* STARS */
+
+.tcard-stars{
+
+    display:flex;
+
+    gap:3px;
+
+    margin-bottom:18px;
 }
 
-.tcard-stars .material-symbols-outlined {
-    font-size: 18px;
-    color: #ddd;
+.tcard-stars .material-symbols-outlined{
+
+    font-size:18px;
+
+    color:#ddd;
 }
 
-.tcard-stars .filled-star {
-    color: #f5a623;
-    font-variation-settings: 'FILL' 1;
+.tcard-stars .filled-star{
+
+    color:#f5a623;
+
+    font-variation-settings:'FILL' 1;
 }
 
-.tcard-text {
-    font-size: 15px;
-    line-height: 1.85;
-    color: #555;
-    margin-bottom: 26px;
-    font-family: "Noto Sans", sans-serif;
-    position: relative;
-    z-index: 1;
+/* TEXT */
+
+.tcard-text{
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:30px;
+
+    font-family:"Noto Sans",sans-serif;
+
+    flex-grow:1;
+
+    position:relative;
+
+    z-index:1;
 }
 
-.tcard-user {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-top: 20px;
-    border-top: 1px solid #f0f0f0;
+/* USER */
+
+.tcard-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding-top:20px;
+
+    border-top:1px solid #f0f0f0;
+
+    margin-top:auto;
 }
 
-.tuser-av {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), #32cd32);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: 800;
-    font-size: 16px;
-    flex-shrink: 0;
-    font-family: "Montserrat", sans-serif;
+/* AVATAR */
+
+.tuser-av{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+    135deg,
+    var(--primary-color),
+    #32cd32
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-weight:800;
+
+    font-size:16px;
+
+    flex-shrink:0;
+
+    font-family:"Montserrat",sans-serif;
 }
 
-.tuser-name {
-    font-weight: 800;
-    font-size: 15px;
-    color: #111;
-    margin-bottom: 4px;
-    font-family: "Montserrat", sans-serif;
+/* NAME */
+
+.tuser-name{
+
+    font-weight:800;
+
+    font-size:15px;
+
+    color:#111;
+
+    margin-bottom:4px;
+
+    font-family:"Montserrat",sans-serif;
 }
 
-.tuser-loc {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 13px;
-    color: #aaa;
+/* LOCATION */
+
+.tuser-loc{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    font-size:13px;
+
+    color:#aaa;
+
+    flex-wrap:wrap;
 }
 
-.tuser-loc .material-symbols-outlined {
-    font-size: 14px;
-    color: var(--primary-color);
+.tuser-loc .material-symbols-outlined{
+
+    font-size:14px;
+
+    color:var(--primary-color);
+}
+
+/* ================================================
+   TABLET
+================================================ */
+
+@media(max-width:992px){
+
+    .testimonials-grid{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* ================================================
+   MOBILE
+================================================ */
+
+@media(max-width:768px){
+
+    .testimonials-section{
+
+        padding:80px 5%;
+    }
+
+    .testimonials-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .tcard{
+
+        padding:30px 22px;
+    }
+
 }
 
 
