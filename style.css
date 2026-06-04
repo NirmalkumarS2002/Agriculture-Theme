@@ -197,7 +197,7 @@
 
     width:100%;
 
-    padding:10px 20px;
+    padding:10px 50px;
 
     display:flex;
 
@@ -329,7 +329,11 @@
 }
 
 
-@media (max-width: 1020px){
+@media (max-width: 1080px){
+
+    .navbar{
+           padding:10px 20px;
+    }
     .nav-content{
         display: flex;
         flex-direction: column;
@@ -353,6 +357,13 @@
     .logo{
        Z-index: 1;
     }
+
+    .navbar.active .nav-icons span{
+
+    color:black;
+    border-color: black;
+} 
+    
 
     .nav-links ul{
         flex-direction: column;
@@ -660,6 +671,10 @@
    IMAGE BUTTONS
 ========================= */
 
+/* =========================
+   IMAGE BUTTONS
+========================= */
+
 .imgbtn{
 
     display:flex;
@@ -677,6 +692,8 @@
     transform:translateY(-50%);
 }
 
+/* BUTTON */
+
 .imgbtn button{
 
     height:20px;
@@ -690,7 +707,21 @@
 
     cursor:pointer;
 
-    transition:0.3s ease;
+    transition:0.4s ease;
+}
+
+/* ACTIVE BUTTON */
+
+.imgbtn button.active-btn{
+
+    background:#22c322;
+
+    border-color:#22c322;
+
+    transform:scale(1.15);
+
+    box-shadow:
+    0 0 15px rgba(34,195,34,0.5);
 }
 
 .top button{
