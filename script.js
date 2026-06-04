@@ -1,3 +1,20 @@
+/* ========================= */
+/* LOADER HIDE */
+/* ========================= */
+
+window.addEventListener("load", () => {
+
+    const loader = document.querySelector(".website-loader");
+
+    setTimeout(() => {
+
+        loader.classList.add("hide");
+
+    }, 2000);
+
+});
+
+
 // nav bar
 
 let navcontent = document.querySelector('.nav-content');
