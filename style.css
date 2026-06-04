@@ -118,6 +118,11 @@
     color: white;
 }
 
+.nav-icons span:hover{
+    color: rgb(7, 223, 7);
+    border: 1px solid  rgb(7, 223, 7);
+}
+
 .login-btn{
     padding:10px 35px;
     font-size: 18px;

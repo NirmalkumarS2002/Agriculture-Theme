@@ -204,3 +204,20 @@ const counterObs = new IntersectionObserver((entries) => {
   });
 }, {threshold: 0.5});
 document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
+
+
+/* ========================= */
+/* 404 PAGE REDIRECT */
+/* ========================= */
+
+const errorBtn = document.querySelectorAll(".errorbutton");
+
+errorBtn.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        window.location.href = "404.html";
+
+    });
+
+});

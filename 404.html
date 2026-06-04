@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 Page</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+/* ========================= */
+/* 404 SECTION */
+/* ========================= */
+
+.error-section{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    overflow:hidden;
+}
+
+/* BACKGROUND IMAGE */
+
+.error-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+    z-index:-2;
+    transform:scale(1.05);
+}
+
+/* DARK OVERLAY */
+
+.error-section::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.72);
+    z-index:-1;
+}
+
+/* ========================= */
+/* CONTENT */
+/* ========================= */
+
+.error-content{
+    text-align:center;
+    max-width:900px;
+    color:#fff;
+    animation:fadeUp 1s ease;
+}
+
+/* SMALL TITLE */
+
+.error-tag{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:50px;
+    background:rgba(0,255,76,0.15);
+    border:1px solid rgba(0,255,76,0.35);
+    color:#7dff7d;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:25px;
+    backdrop-filter:blur(10px);
+}
+
+/* 404 TEXT */
+
+.error-number{
+    font-size:190px;
+    font-weight:800;
+    line-height:1;
+    color:#fff;
+    text-shadow:0 0 35px rgba(0,255,76,0.35);
+}
+
+/* TITLE */
+
+.error-content h2{
+    font-size:65px;
+    line-height:1.2;
+    margin:20px 0;
+}
+
+/* DESCRIPTION */
+
+.error-content p{
+    font-size:21px;
+    line-height:1.8;
+    color:#d7d7d7;
+    margin-bottom:40px;
+}
+
+/* BUTTONS */
+
+.error-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* BUTTON */
+
+.error-btn{
+    padding:18px 38px;
+    border-radius:60px;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+    transition:0.4s ease;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* PRIMARY */
+
+.primary-btn{
+    background:linear-gradient(to right,#00a62e,#8fff4d);
+    color:#fff;
+}
+
+.primary-btn:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,255,76,0.25);
+}
+
+/* SECONDARY */
+
+.secondary-btn{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.18);
+    backdrop-filter:blur(12px);
+    color:#fff;
+}
+
+.secondary-btn:hover{
+    background:#fff;
+    color:#111;
+    transform:translateY(-6px);
+}
+
+
+/* ========================= */
+/* ANIMATION */
+/* ========================= */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ========================= */
+/* LAPTOP */
+/* ========================= */
+
+@media(max-width:1200px){
+
+    .error-number{
+        font-size:150px;
+    }
+
+    .error-content h2{
+        font-size:52px;
+    }
+
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media(max-width:768px){
+
+    .error-number{
+        font-size:120px;
+    }
+
+    .error-content h2{
+        font-size:38px;
+    }
+
+    .error-content p{
+        font-size:17px;
+    }
+
+    .error-btn{
+        padding:16px 28px;
+        font-size:15px;
+    }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:480px){
+
+    .error-section{
+        padding:30px 15px;
+    }
+
+    .error-number{
+        font-size:90px;
+    }
+
+    .error-content h2{
+        font-size:28px;
+    }
+
+    .error-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .error-buttons{
+        flex-direction:column;
+    }
+
+    .error-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .error-tag{
+    font-size: 12px;
+    padding:5px 12px;}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- 404 SECTION -->
+<!-- ========================= -->
+
+<section class="error-section">
+
+    <!-- FLOATING SHAPES -->
+
+
+    <!-- CONTENT -->
+
+    <div class="error-content">
+
+        <span class="error-tag">
+            Organic Farm Website
+        </span>
+
+        <h1 class="error-number">
+            404
+        </h1>
+
+        <h2>
+            Oops! Page Not Found
+        </h2>
+
+        <p>
+            The page you are looking for might have been removed,
+            renamed or is temporarily unavailable.
+            Let’s get you back to the farm.
+        </p>
+
+        <!-- BUTTONS -->
+
+        <div class="error-buttons">
+
+            <a href="#" class="error-btn primary-btn">
+
+                Back To Home
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+            <a href="#" class="error-btn secondary-btn">
+
+                Contact Us
+
+                <i class="fa-solid fa-phone"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
