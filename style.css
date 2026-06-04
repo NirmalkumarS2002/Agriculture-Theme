@@ -2509,3 +2509,86 @@
     }
 
 }
+
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+/* LEFT */
+
+.reveal-left{
+
+    opacity:0;
+
+    transform:translateX(-100px);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal-left.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+}
+
+/* RIGHT */
+
+.reveal-right{
+
+    opacity:0;
+
+    transform:translateX(100px);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal-right.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+}
+
+/* ZOOM */
+
+.zoom-in{
+
+    opacity:0;
+
+    transform:scale(0.7);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.zoom-in.active{
+
+    opacity:1;
+
+    transform:scale(1);
+}
