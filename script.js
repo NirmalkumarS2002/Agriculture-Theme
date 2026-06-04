@@ -37,7 +37,7 @@ close1.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", (() => {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 1080) {
         navcontent.style.visibility = "visible";
         navcontent.style.opacity = "1";
         toggle.style.display = "none";
