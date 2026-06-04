@@ -84,21 +84,21 @@ let img2=document.querySelector(".img2")
 let img3=document.querySelector(".img3")
 
 img1.addEventListener("click",()=>{
-        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-1")`;
+        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-1.webp")`;
         img1.style.backgroundColor="green"
         img2.style.backgroundColor="transparent"
         img3.style.backgroundColor="transparent"
 })
 
 img2.addEventListener("click",()=>{
-        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-2")`;
+        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-2.webp")`;
         img2.style.backgroundColor="green"
         img3.style.backgroundColor="transparent"
         img1.style.backgroundColor="transparent"
 })
 
 img3.addEventListener("click",()=>{
-        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-3")`;
+        herosection.style.backgroundImage =`linear-gradient(90deg,rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521)),url("./src/hero-3.webp")`;
         img3.style.backgroundColor="green"
         img1.style.backgroundColor="transparent"
         img2.style.backgroundColor="transparent"
@@ -173,3 +173,34 @@ topBtn.addEventListener("click",()=>{
     });
 
 });
+
+
+// Scroll Fade-in Animation
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) e.target.style.animationPlayState = 'running';
+  });
+}, {threshold: 0.15});
+document.querySelectorAll('.fade-in').forEach(el => {
+  el.style.animationPlayState = 'paused';
+  fadeObserver.observe(el);
+});
+
+// Stats Counter Animation
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const el = e.target;
+      const target = +el.dataset.target;
+      let current = 0;
+      const step = Math.ceil(target / 60);
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current.toLocaleString();
+        if(current >= target) clearInterval(timer);
+      }, 25);
+      counterObs.unobserve(el);
+    }
+  });
+}, {threshold: 0.5});
+document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
