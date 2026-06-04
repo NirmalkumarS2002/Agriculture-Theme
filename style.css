@@ -379,28 +379,53 @@
     .navbar{
            padding:10px 20px;
     }
-    .nav-content{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    
-        height: 100vh;
-        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        justify-content: flex-start;
-        align-items: center;
-        padding: 20px;
-        width: 100%;
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.3s ease-in-out;
-        gap: 30px;
-    }
+ .nav-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    position:fixed;
+
+    top:0;
+
+    left:-100%;
+
+    height:100vh;
+
+    width:100%;
+
+    background:linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+    );
+
+    justify-content:flex-start;
+
+    align-items:flex-start;
+
+    padding:30px;
+
+    gap:30px;
+
+    z-index:1;
+
+    transition:0.5s ease;
+}
+
+/* =========================
+   ACTIVE MENU
+========================= */
+
+.nav-content.active{
+
+    left:0;
+}
 
     
     .logo{
-       Z-index: 1;
+       Z-index: 2;
     }
 
     .navbar.active .nav-icons span{
@@ -414,7 +439,7 @@
         flex-direction: column;
         gap: 15px;
         margin-top: 80px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .menu-toggle{
@@ -1329,6 +1354,7 @@
     font-size:16px;
 
     background:#fff;
+     border-radius: 10px;
 }
 
 /* BUTTON */
@@ -1339,7 +1365,7 @@
 
     border:none;
 
-
+    border-radius: 10px;
     background:#12b82f;
 
     color:white;
@@ -1439,9 +1465,9 @@
 
 .footer-social a{
 
-    width:50px;
+    width:40px;
 
-    height:50px;
+    height:40px;
 
     border-radius:50%;
 
@@ -1492,8 +1518,8 @@
 
     .footer-social a{
  font-size:16px;
- height: 40px;
- width: 40px;
+ height: 38px;
+ width: 38px;
     }
 
 }

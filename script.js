@@ -17,6 +17,8 @@ window.addEventListener("load", () => {
 
 // nav bar
 
+
+
 let navcontent = document.querySelector('.nav-content');
 let toggle = document.querySelector('.menu-toggle');
 let close1 = document.querySelector(".close-btn");
@@ -73,6 +75,28 @@ window.addEventListener("scroll",()=>{
         navbar.classList.remove("active");
 
     }
+
+});
+
+let menuBtn = document.querySelector(".menu-toggle");
+
+let closeBtn = document.querySelector(".close-btn");
+
+let navContent = document.querySelector(".nav-content");
+
+/* OPEN MENU */
+
+menuBtn.addEventListener("click",()=>{
+
+    navContent.classList.add("active");
+
+});
+
+/* CLOSE MENU */
+
+closeBtn.addEventListener("click",()=>{
+
+    navContent.classList.remove("active");
 
 });
 // =========================
